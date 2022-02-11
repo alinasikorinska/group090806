@@ -1,0 +1,39 @@
+@import 'fonts';
+body{
+    background: linear-gradient(rgb(138, 221, 214), rgb(138, 124, 214)) no-repeat;
+}
+.header{
+width: 100%;
+    &__title{
+        text-align: center;
+        font-family: Lato-Bold;
+        margin-top: 5%;
+    }
+    &__text{
+        font-family: Lato-Light;
+        margin-left: 20%;
+    }
+}
+.main{
+    width: 100%;
+    padding: 10% 0;
+    &__content{
+        margin-left: 30%;
+    & input{
+        outline: none;
+        border: 1px rgb(153, 147, 147) solid;
+        font-family: Lato-Light;
+        width: 20%;
+        font-size: 16px;
+        border-radius: 15px;
+    }
+    & input:focus{
+        border: 3px rgb(17, 42, 75) solid;
+    }
+    }
+    select{
+        font-family: Lato-Light;
+        width: 10%;
+        font-size: 16px; 
+    }
+}
