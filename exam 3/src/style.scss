@@ -1,0 +1,581 @@
+@import 'mixin';
+@import "keyframe";
+$color__purple:#87509c;
+$color__orange: #eb7d4b;
+$color__green: #17c2a4;
+$color__pink: #d74680;
+$color__blue: #3c5499;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    background: $color__purple;
+    color:white;
+    width:100%;
+    & .menu{
+        position: fixed;
+        width:100%;
+        background-color:$color__purple;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding:2% 0;
+        z-index: 5;
+        & .dropdown{
+            display: none;
+        }
+        &__list{
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+            width: 55%;
+            & a{
+                color:white;
+                text-decoration: none;
+                font-family: TitilliumWeb-Regular;
+                font-size: 16px;
+            &:hover{
+                color:$color__orange;
+            }
+            }
+            }
+            & li.active{
+                background-color: #643a79;
+                border-radius: 25px;
+            }
+        }
+    & .content{
+        @include centercolumn;
+        padding:10% 0;
+        &__text{
+            @include title;
+            text-align: center;
+            width:70%;
+        }
+        &__button{
+           @include button;
+            background-color:$color__orange;
+        }
+    }
+}
+.service{
+    width:100%;
+    padding:5% 0;
+    background-color:$color__green;
+    color:white;
+    & h2{
+        @include title;
+        text-align: center;
+    }
+    & hr{
+        border: 2px #14a58c solid;
+        @include hr;
+    }
+    &__text{
+        @include text;
+        text-align: center;
+        width:50%;
+        margin: 2% 25%;
+    }
+    & .content{
+        display: flex;
+    }
+    & .container{
+        padding:3% 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+    & .box{
+        padding:2% 0;
+        @include centercolumn;
+        text-align: center;
+        &__title{
+            @include title;
+            font-size: 24px;
+            margin-top: 3%;
+        }
+        &__text{
+            @include subtext;
+            margin-top: 3%;
+        }
+    }
+    & .box:hover{
+        background-color: #14a58c;
+        width: 100%;
+        color: black;
+    }
+    }
+}
+.meatteam{
+    width:100%;
+    padding:7% 0;
+    background-color:#e7f1f8;
+    color:#3c4761;
+    & h2{
+        @include title;
+        text-align: center;
+    }
+    & hr{
+        border: 2px #3c4761 solid;
+        @include hr;
+    }
+    &__text{
+        @include text;
+        text-align: center;
+        width:50%;
+        margin: 2% 25%;
+    }
+    & .slick-slider {
+        .slick-list {
+          overflow: hidden;
+        }
+        .slick-track {
+          display: flex;
+        }
+    }
+    & .slider {
+        position: relative;
+        &__item{
+            position: relative;
+            display: flex !important;
+            @include centercolumn;
+            margin: 0 1%;
+        &:hover{
+            background-color:#3c4761;
+            color:white;
+        }
+        & img{
+            border-radius: 50%;
+            width:50%;
+        }
+        &__title{
+            @include title;
+            font-size:24px;
+            margin-top: 3%;
+        }
+        &__subtext{
+            @include text;
+            color: $color__green;
+            margin-top: 3%;
+        }
+        &__text{
+            @include subtext;
+            text-align: center;
+            margin-top: 3%;
+        }
+        }    
+        & .slick-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 3;
+            margin-top: -6%;
+            font-size: 0;
+            height: 50px;
+            width: 50px;
+            border: none;
+            border-radius: 50%;
+            background: url("../dist/img/Arrow.png") 0 0 / 100% no-repeat;
+            cursor: pointer;
+            &.slick-prev {
+              left: 0;
+              transform: rotate(90deg);
+            }
+            &.slick-next {
+              right: 0;
+              transform: rotate(-90deg);
+            }
+          }
+        & .slick-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            & li {
+              list-style-type: none;
+              margin: 0 8px;
+              &.slick-active button {
+                  background: #3c4761;
+                  border: 1px solid #3c4761;
+                }
+            }
+            & button {
+                font-size: 0;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                border: 1px #3c4761 solid;
+                background: inherit;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.skills{
+    width:100%;
+    padding:5% 0;
+    color:#3c4761;
+    & hr{
+        @include hr;
+        border: 2px #dfe8ed solid;
+    }
+    & h2{
+        @include title;
+        text-align: center;
+    }
+    &__text{
+        @include text;
+        text-align: center;
+        width:50%;
+        margin: 2% 25%;
+    }
+    & .content{
+        padding: 3% 0;
+        display: flex;
+        justify-content: space-around;
+        &__text{
+            font-family:  TitilliumWeb-Bold;
+            font-size: 22px;
+        }
+        & .content__chart {
+            position: relative;
+            border-radius: 50%;
+            width: 20%;
+            padding: 10% 0;
+            @include title;
+          }
+          .chart1{
+            background: conic-gradient($color__blue var(--percentage), rgb(197, 197, 197) 0);
+            animation: timer1 5s ease-in 2 both running;
+          }
+          .chart2{
+            background: conic-gradient($color__pink var(--percentage), rgb(197, 197, 197) 0);
+            animation: timer2 5s ease-in 2 both running;
+          }
+          .chart3{
+            background: conic-gradient($color__green var(--percentage), rgb(197, 197, 197) 0);
+            animation: timer3 5s ease-in 2 both running;
+          }
+          .chart4{
+            background: conic-gradient($color__orange var(--percentage), rgb(197, 197, 197) 0);
+            animation: timer4 5s ease-in 2 both running;
+          }
+          
+        & .chart__block{
+            position: absolute;
+            background-color: white;
+            left: 7.5%;
+             width: 85%;
+            text-align: center;
+            padding: 31% 0;
+            top: 8%;
+            border-radius: 50%;
+        }
+    }
+}
+.portfolio{
+    width:100%;
+    padding:5% 0;
+    color: #393939;
+    background-color: #ffdd99;
+    & hr{
+        @include hr;
+        border: 2px #ebc985 solid;
+    }
+    & h2{
+        @include title;
+        text-align: center;
+    }
+    &__text{
+        @include text;
+        text-align: center;
+        width:50%;
+        margin: 2% 25%;
+    }
+    & .container{
+        width: 30%;
+        margin: 2% 35%;
+        display: flex;
+        justify-content: space-evenly;
+        &__button{
+            @include text;
+            background-color: #ebc985;
+            border:none;
+            color: #393939;
+            border-radius: 10px;
+            width:15%;
+            cursor: pointer;
+            &:hover{
+                color:$color__green;
+            }
+            &.active{
+                background-color: white;
+            }
+        }
+    }
+    & .block{
+        @include centercolumn;
+        &#web,
+        &#apps,
+        &#icons{
+            display: none;
+        }
+        & .box{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            margin:3% 0;
+            
+            &__item:hover{
+                background-color: #ebc985;        
+                color:white;
+            }
+        & p{
+            @include text;
+            text-align: center;
+            font-size: 18px;
+            margin: 2% 0;
+        }
+        }
+    }  
+    & .hidden{
+        display: none;
+        flex-direction: column;
+    align-items:center;
+        color:white;
+        width: 80%;
+        margin: 0 10%;
+        background-color: rgb(241, 89, 89);
+        position: relative;
+        padding: 3% 5%;
+        & img{
+            width:100%;
+            padding: 3% 0;
+        }
+        &__title{
+        @include title;    
+        }
+        &__text{
+            @include text;
+        }
+        &__close{
+            position: absolute;
+            right: 4%;
+            border-radius: 50%;
+            border: none;
+            padding: 0px 0.7%;
+            cursor: pointer;
+            color: red;
+            font-size: 16px;
+            background-color: white;
+        }
+    }
+    &__button{
+        @include button;
+        background-color:$color__green;
+        margin-left: 38%;
+    }
+}
+.feedbacks{
+    width:100%;
+    padding:5% 0;
+    color: white;
+    background-color: $color__pink;
+    & hr{
+        @include hr;
+        border: 2px #b73c6d solid;
+    }
+    & h2{
+        @include title;
+        text-align: center;
+    }
+    &__text{
+        @include text;
+        text-align: center;
+        width:50%;
+        margin: 2% 25%;
+    }
+    & .content{
+        width: 100%;
+        margin: 3% 0;
+        display: flex;
+        justify-content: space-evenly;
+        & img{
+            width: 20%;
+            border-radius: 50%;
+            margin-right: 3%;
+        }
+        & .box{
+            display: flex;
+            width: 37%;
+            align-items: flex-start;
+            padding:3% 0;
+            &:hover{
+                width: 42%;
+                background-color: #b73c6d;
+                color:black;
+            }
+            & .block{
+                &__text{
+                    font-family: TitilliumWeb-Italic;
+                    font-size: 20px;
+                    margin-bottom: 3%;
+                }
+                &__name{
+                    font-family: TitilliumWeb-Bold;
+                    font-size: 24px;
+                    margin-bottom: 3%;
+                }
+                &__position{
+                   @include text;
+                   color: #ffdd99; 
+                }
+            }
+            
+        } 
+    }
+}
+.contact{
+    width:100%;
+    padding:5% 0;
+    color: white;
+    background-color: $color__blue;
+    & hr{
+        @include hr;
+        border: 2px #273a71 solid;
+    }
+    & h2{
+        @include title;
+        text-align: center;
+    }
+    &__text{
+        @include text;
+        text-align: center;
+        width:50%;
+        margin: 2% 25%;
+    }
+    & .form{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin:2% 25%;
+        padding:3% 0;
+        &__box{
+            display: flex;
+            justify-content: space-between;
+            margin: 4% 0;
+            & input{
+                width: 45%;
+                padding:3% 0;
+            }
+        }
+        & input{
+            background-color: #273a71; 
+            border: none;
+            color: white;
+            @include text;
+            &::placeholder{
+                color:white;
+                @include text;
+            }
+        &:focus{
+            color:white;
+            @include text;
+            border: none;
+            outline: none;  
+        }
+        }
+        &__text{
+            padding: 3% 0 17%;
+        }
+    }
+    &__button{
+        @include button;
+        background-color:$color__pink;
+        margin-left: 38%;
+    }
+    & .location{
+        display: flex;
+        justify-content: space-around;
+        margin:5% 0;
+        & #map{
+            width: 35%;
+            height: 60vh;
+            z-index: 1;
+        }
+        & .box{
+            @include centercolumn;
+            justify-content: space-between;
+        }
+        & .box__subtext{
+            @include text;
+            
+        }
+        & .box__text{
+            @include title;
+        }
+    }
+}
+.footer{
+    background-color: $color__purple;
+    width: 100%;
+    padding: 5% 0;
+    color:white;
+    & .content{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin:3% 0;
+        &__text{
+            @include text;
+        }
+        & a{
+            color:red;
+        }
+    }
+    &__nav{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        margin: 3% 25%;
+        & .fa{
+            color:white;
+            border-radius: 10px;
+            padding:45% 45%;
+            &.fa.fa-facebook:hover,
+            &.fa.fa-twitter:hover,
+            &.fa.fa-instagram:hover,
+            &.fa.fa-linkedin:hover,
+            &.fa.fa-behance:hover,
+            &.fa.fa-github:hover{
+                background-color: #fff;
+                color: #87509c;
+            }
+            &.fa-facebook{
+                background-color:$color__blue;
+                padding:75% 100%;
+            }
+            &.fa-twitter{
+                background-color:$color__green;
+            }
+            &.fa-instagram{
+                background-color: $color__orange;
+            }
+            &.fa-linkedin{
+                background-color:$color__pink;
+            }
+            &.fa-behance{
+                background-color: red;
+            }
+            &.fa-github{
+                background-color: yellow;
+            }
+        }
+    }
+}
+@import 'media'

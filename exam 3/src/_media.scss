@@ -1,0 +1,361 @@
+@media screen and (max-width: 420px){
+    .header{
+        & .content{
+            padding:15% 0;
+        }
+        & .menu__list{
+            display: none !important;
+        }
+        & .dropdown{
+            display: flex !important;
+            float: right;  
+             &-content{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                visibility: hidden;
+                list-style-type: none;
+                margin: 2% -13%;
+                background-color: $color__purple;
+            }
+            & a{
+                text-decoration: none;
+                @include text;
+                color:white;
+                font-size: 14px;
+                border-bottom: 1px white solid;
+            }
+        }
+        & .dropbtn{
+            background-color: $color__purple;
+            border:none;
+            color:white;
+            font-size: 20px;
+            margin-left: -55%;
+        }
+        & .dropdown:hover .dropdown-content {
+            visibility: visible;
+        }
+    }
+    .portfolio{
+        & .box{
+            flex-direction: column;
+            &__item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            & img{
+                width: 90%;
+            }
+            }
+        }
+        & .container{
+            width: 44%;
+            margin: 2% 27%;
+            &__button{
+                width: 25%;
+            }
+        }
+    }
+    .feedbacks{
+        & .content{
+            flex-direction: column;
+        }
+        & .content__box{
+            width: 90% !important;
+        }
+    }
+    h3{
+        font-size: 16px !important;
+    }
+    h2{
+        font-size: 24px !important;
+    }
+    p{
+        font-size: 14px !important;
+    }
+    .chart__block{
+        padding: 7% 0 !important;
+    }
+    .contact__location{
+        #map{
+            height: 30vh !important;
+        }
+    }
+    .content__button,
+    .portfolio__button,
+    .contact__button{
+        font-size: 14px !important;
+    }
+    .service{
+        & .content{
+            flex-direction: column;
+            align-items: center;
+        }
+        & .container{
+            flex-direction: column;
+        }
+    }
+    .logo{
+        width: 20%;
+    }
+    .footer{
+        & .fa{
+            padding: 10% 13% !important;
+        }
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width:576px){
+    .header{
+        & .menu__list{
+            display: none !important;
+        }
+        & .dropdown{
+            display: flex !important;
+            float: right;  
+             &-content{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                visibility: hidden;
+                list-style-type: none;
+                margin: 2% -13%;
+                background-color: $color__purple;
+            }
+            & a{
+                text-decoration: none;
+                @include text;
+                color:white;
+                font-size: 14px;
+                border-bottom: 1px white solid;
+            }
+        }
+        & .dropbtn{
+            background-color: $color__purple;
+            border:none;
+            color:white;
+            font-size: 20px;
+            margin-left: -55%;
+        }
+        & .dropdown:hover .dropdown-content {
+            visibility: visible;
+        }
+    }
+    .portfolio{
+        & .box{
+            &__item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            & img{
+                width: 90%;
+            }
+            }
+        }
+        & .container{
+            width: 44%;
+            margin: 2% 27%;
+            &__button{
+                width: 25%;
+            }
+        }
+    }
+    .feedbacks{
+        & .content__box{
+            width: 45% !important;
+        }
+    }
+    h3{
+        font-size: 16px !important;
+    }
+    h2{
+        font-size: 24px !important;
+    }
+    p{
+        font-size: 16px !important;
+    }
+    .chart__block{
+        padding: 14% 0 !important;
+    }
+    .contact__location{
+        #map{
+            height: 30vh !important;
+        }
+    }
+    .content__button,
+    .portfolio__button,
+    .contact__button{
+        font-size: 15px !important;
+    }
+    .service{
+        & .container{
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 720px){
+    .header{
+        & .menu__list{
+            display: none !important;
+        }
+        & .dropdown{
+            display: flex !important;
+            float: right;  
+             &-content{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                visibility: hidden;
+                list-style-type: none;
+                margin: 2% -13%;
+                background-color: $color__purple;
+            }
+            & a{
+                text-decoration: none;
+                @include text;
+                color:white;
+                font-size: 14px;
+                border-bottom: 1px white solid;
+            }
+        }
+        & .dropbtn{
+            background-color: $color__purple;
+            border:none;
+            color:white;
+            font-size: 20px;
+            margin-left: -55%;
+        }
+        & .dropdown:hover .dropdown-content {
+            visibility: visible;
+        }
+    }
+    .portfolio{
+        & .box{
+            &__item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            & img{
+                width: 90%;
+            }
+            }
+        }
+        & .container{
+            width: 44%;
+            margin: 2% 27%;
+            &__button{
+                width: 25%;
+            }
+        }
+    }
+    .feedbacks{
+        & .content__box{
+            width: 45% !important;
+        }
+    }
+    h3{
+        font-size: 16px !important;
+    }
+    h2{
+        font-size: 28px !important;
+    }
+    p{
+        font-size: 18px !important;
+    }
+    .chart__block{
+        padding: 20% 0 !important;
+    }
+    .contact__location{
+        #map{
+            height: 40vh !important;
+        }
+    }
+    .content__button,
+    .portfolio__button,
+    .contact__button{
+        font-size: 16px !important;
+    }
+    .service{
+        & .container{
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 960px){
+    .portfolio{
+        & .box{
+            &__item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            & img{
+                width: 90%;
+            }
+        }
+    }
+}
+.chart__block{
+    padding: 23% 0 !important;
+}
+.header{
+        & a{
+            font-size: 14px !important;
+        }
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1068px){
+    .portfolio{
+        & .box{
+            &__item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            & img{
+                width: 90%;
+            }
+        }
+    }
+}
+}
+@media screen and (min-width: 1500px) and (max-width: 1900px){
+    h3{
+        font-size: 30px !important;
+    }
+    h2{
+        font-size: 50px !important;
+    }
+    p{
+        font-size: 28px !important;
+    }
+    .chart__block{
+        padding: 36% 0 !important;
+    }
+    .content__button,
+    .portfolio__button,
+    .contact__button{
+        font-size: 26px !important;
+    }
+    .location__box{
+        & i {
+            font-size: 30px !important;
+        }
+    }
+    .header{
+        & a{
+            font-size: 20px !important;
+        }
+    }
+    input::placeholder{
+        font-size: 24px !important;
+    }
+    input{
+        font-size: 24px !important;
+    }
+}

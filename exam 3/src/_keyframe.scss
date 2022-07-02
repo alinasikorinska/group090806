@@ -1,0 +1,26 @@
+@property --percentage {
+    initial-value: 0%;
+    inherits: false;
+    syntax: "<percentage>";
+    
+  }
+  @keyframes timer1 {
+    to {
+      --percentage: 90%;
+    }
+  }
+  @keyframes timer2 {
+    to {
+      --percentage: 75%;
+    }
+  }
+  @keyframes timer3 {
+    to {
+      --percentage: 70%;
+    }
+  }
+  @keyframes timer4 {
+    to {
+      --percentage: 85%;
+    }
+  }
