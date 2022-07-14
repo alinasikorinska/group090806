@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Raleway-Light;
+    src: url(./fonts/Raleway-Light.ttf);
+}
+
+@font-face {
+    font-family: Raleway-Bold;
+    src: url(./fonts/Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/Montserrat-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 50em;
+    background-color: #F1F1F1;
+    width: 50%;
+    margin: 5% 25%;
+
+    & h1,
+    h3 {
+        text-align: center;
+        padding: 1.5% 0;
+    }
+
+    & h1 {
+        font-size: 38px;
+        width: 80%;
+        font-family: Raleway-Bold;
+    }
+
+    & h3 {
+        font-family: Raleway-Light;
+    }
+
+    & .field {
+        width: 100%;
+        padding: 2% 5%;
+    }
+
+    & .form__button {
+        border: none;
+        color: white;
+        background-color: #A5B330;
+        border-radius: 25px;
+        font-family: Raleway-Light;
+        font-size: 15px;
+        padding: 3% 10%;
+        cursor: pointer;
+    }
+
+    & .form__button:hover {
+        background-color: rgb(230, 106, 49);
+    }
+}
+
+.field input {
+    border: 0;
+    outline: none;
+    width: 100%;
+    background-color: #F1F1F1;
+    font-family: Montserrat;
+    border-bottom: black 1px solid;
+}
+
+.field label {
+    color: #666;
+    font-family: Montserrat;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+input::placeholder {
+    font-family: Montserrat;
+    font-size: 15px;
+}
+
+.code {
+    padding: 30px 0 20px 0;
+
+}
+
+code {
+    background: #eee;
+    display: block;
+    color: #f50;
+
+}
+
+.licence {
+    font-size: 12px;
+    padding: 30px 0;
+
+}
+
+.licence a {
+    border: none;
+}
+
+.country-phone {
+    border: none;
+    border-bottom: black 1px solid;
+    font-family: Montserrat;
+}
+
+#phone {
+    width: 80%;
+    border: none;
+    font-family: Montserrat;
+
+}
+
+input:focus {
+    border-bottom: red 3px solid;
+    font-weight: bold;
+}
+
+input:focus::placeholder {
+    font-weight: bold;
+}
+
+.form__about {
+    border: none;
+    font-family: Montserrat;
+    font-size: 15px;
+    background-color: #F1F1F1;
+    width: 100%;
+    border-bottom: black 1px solid;
+}
+
+.form__about:focus {
+    border: none;
+    outline: none;
+    border-bottom: red 3px solid;
+    font-weight: bold;
+    background-color: #F1F1F1;
+}
+
+.chosen-select {
+    width: 100% !important;
+}
+
+.chosen-choices {
+    border: none !important;
+    background-image: none !important;
+    background-color: #F1F1F1 !important;
+    border-bottom: black 1px solid !important;
+}
+
+.chosen-search-input {
+    font-family: Montserrat !important;
+    font-size: 15px !important;
+    margin: 0 -5px !important;
+    color: #666 !important;
+}
+
+.search-choice {
+    font-family: Montserrat !important;
+    background-image: none !important;
+    background-color: #fff !important;
+}
+
+.chosen-drop {
+    font-family: Montserrat !important;
+}

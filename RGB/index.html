@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="./phonecode.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="main">
+        <form class="form">
+            <h1 class="form__title">Анкета Front-end разработчика</h1>
+            <h3 class="form__subtitle">Введите свои данные</h3>
+            <div class="field">
+                <label for="userName">Имя</label>
+                <input type="text" class="form__name" id="userName" placeholder="Имя">
+            </div>
+            <div class="field">
+                <label for="userSurname">Фамилия</label>
+                <input type="text" class="form__surname" id="userSurname" placeholder="Фамилия">
+            </div>
+            <div class="field">
+                <label for="userEmail">E-mail</label>
+                <input type="email" class="form__email" id="userEmail" placeholder="E-mail">
+            </div>
+            <div class="field">
+                <select data-placeholder="Навыки" multiple class="chosen-select" name="test">
+                    <option value=""></option>
+                    <option value="Html/CSS">Html/CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="jQuery">jQuery</option>
+                    <option value="Bootstrap">Bootstrap</option>
+                    <option value="Sass">Sass</option>
+                </select>
+            </div>
+            <div class="field">
+                <input type="text" id="phone" name="phone" autofocus="true" placeholder="">
+            </div>
+            <div class="field">
+                <label for="userCity">Город проживания</label>
+                <input type="text" class="form__city" id="userCity" placeholder="Город проживания">
+            </div>
+            <div class="field">
+                <label for="userAbout">Немного о себе</label>
+                <textarea class="form__about" id="userAbout" placeholder="Немного о себе" rows="3"></textarea>
+            </div>
+            <button type="submit" class="form__button">Отправить</button>
+        </form>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+    <script src="phonecode.js"></script>
+    <script src="countries.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
